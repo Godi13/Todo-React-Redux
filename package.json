@@ -9,20 +9,6 @@
     "test:watch": "npm test -- --watch",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage ./.nyc_output"
   },
-  "nyc": {
-    "require": [
-      "babel-register"
-    ],
-    "reporter": [
-      "lcov",
-      "text"
-    ],
-    "include": [
-      "test/**/*.spec.js"
-    ],
-    "sourceMap": false,
-    "instrument": false
-  },
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "classnames": "^2.1.2",
