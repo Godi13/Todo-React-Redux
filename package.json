@@ -1,0 +1,70 @@
+{
+  "name": "Todo-React-Redux",
+  "version": "0.0.0",
+  "description": "React Redux example",
+  "scripts": {
+    "start": "node server.js",
+    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
+    "test:cov": "cross-env NODE_ENV=test nyc --reporter=text --reporter=lcov mocha test/**/*.spec.js",
+    "test:watch": "npm test -- --watch",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage ./.nyc_output"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "include": [
+      "test/**/*.spec.js"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "classnames": "^2.1.2",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-redux": "^4.2.1",
+    "redux": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.15",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-istanbul": "^4.1.3",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-register": "^6.3.13",
+    "coveralls": "^2.13.1",
+    "cross-env": "^2.0.1",
+    "expect": "^1.8.0",
+    "express": "^4.13.3",
+    "jsdom": "^9.5.0",
+    "mocha": "^3.0.2",
+    "node-libs-browser": "^1.0.0",
+    "nyc": "^10.3.0",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.3.1",
+    "style-loader": "^0.13.1",
+    "todomvc-app-css": "^2.0.1",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.9.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Godi13/Todo-React-Redux.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Godi13/Todo-React-Redux/issues"
+  },
+  "homepage": "https://github.com/Godi13/Todo-React-Redux#readme"
+}
